@@ -1,4 +1,5 @@
-<img src="https://github.com/franciscerio/ota-android/blob/master/images/Screen%20Shot%202024-08-21%20at%208.33.27%20PM.png" width="450"/>
+<img src="https://github.com/franciscerio/ota-android/blob/master/images/ss1.png" width="450"/>
+<img src="https://github.com/franciscerio/ota-android/blob/master/images/ss2.png" width="450"/>
 
 # Sample app requirements
 - [x] Shows the list of delivery stops.
