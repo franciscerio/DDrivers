@@ -57,10 +57,10 @@ class HomeInteractor @Inject constructor(
 
     private fun resetValues(): Flow<HomeResult> {
         return flow {
-            emit(HomeResult.ResetValuesSuccess)
             sharedPreferences.edit { clear() }
             // TODO
             DELIVERY.tryEmit(NetworkData.DELIVERIES)
+            emit(HomeResult.ResetValuesSuccess)
         }
     }
 

@@ -18,6 +18,7 @@ sealed interface MainAction {
 }
 
 sealed interface MainResult {
+    data object ItemsLoaded : MainResult
     data class TabsLoaded(val tabs: List<HomeSections>) : MainResult
     data class NavigateToSelectedTab(val tab: HomeSections) : MainResult
 }

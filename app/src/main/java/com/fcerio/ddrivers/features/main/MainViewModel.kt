@@ -12,8 +12,8 @@ class MainViewModel @Inject constructor(
 ) : BaseViewModel<MainAction, MainResult, MainState>(interactor) {
 
     init {
-        postAction(MainAction.LoadDeliveryItems)
         postAction(MainAction.LoadAllTabs)
+        postAction(MainAction.LoadDeliveryItems)
     }
 
     override val defaultState: MainState
@@ -34,6 +34,7 @@ class MainViewModel @Inject constructor(
                 selectedTab = result.tab,
                 navigateToSelectedTab = Event(result.tab)
             )
+            is MainResult.ItemsLoaded -> prevState.copy()
         }
     }
 }

@@ -19,12 +19,12 @@ class MainInteractor @Inject constructor(
     private fun loanDeliveryItems(): Flow<MainResult> {
         return flow {
             DELIVERY.tryEmit(NetworkData.DELIVERIES)
+            emit(MainResult.ItemsLoaded)
         }
     }
 
     private fun loadAllTabs(): Flow<MainResult> {
         return flow {
-            DELIVERY.tryEmit(NetworkData.DELIVERIES)
             emit(MainResult.TabsLoaded(HomeSections.entries))
         }
     }
